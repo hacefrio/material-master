@@ -1,0 +1,115 @@
+$prymary-color: #ef3634;
+.conatiner{
+    .logo {
+        z-index: -999;
+        height: 10%;
+        width: 10%;
+    }
+}
+.login-form {
+  
+    //background-color: $prymary-color;
+    z-index: 9999;
+    .banner_section {
+        display: flex;
+        justify-content: center;
+        flex-direction: row;
+        align-items: center;
+        margin-top: 2rem;
+      //  margin-top: 20px; // o cualquier otro margen que desees agregar
+
+        .titulo_container {
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            width: 100%;
+            height: 100%;
+            background-color: $prymary-color;
+            h1 {
+                font-size: 87px;
+                color: #fff;
+            }
+            h2,
+            h3 {
+                color: #fff;
+            }
+        }
+    }
+    .form_card {
+        display: flex;
+        //justify-content: center;
+        max-width: 550px;
+        margin: 2rem auto;
+        text-align: center;
+        height: 550px;
+        mat-card-title {
+            margin: 2rem;
+            font-size: 2rem;
+            font-weight: 300;
+            font-style: bold;
+        }
+    }
+    .full-width-input,
+    button {
+        width: 100%;
+    }
+    // .separator {
+    //     margin-bottom: 2rem;
+    // }
+
+    .group_btn {
+        display: flex;
+        justify-content: space-between;
+        margin-top: 3rem;
+        gap: 1rem;
+    }
+    .group_btn_rrss {
+        display: flex;
+        justify-content: space-between;
+        margin-bottom: 2rem;
+        gap: 1rem;
+        padding: 1rem;
+    }
+    .btn_google {
+        background-color: #dd4b39;
+        color: #fff;
+    }
+    .btn_face {
+        background-color: #3b5998;
+        color: #fff;
+    }
+
+   
+}
+
+@media only screen and (max-width: 1420px) {
+    .login-form {
+        .banner_section {
+            .titulo_container {
+                h1 {
+                    font-size: 50px;
+                }
+            }
+        }
+        mat-card {
+            text-align: center;
+            width: 90%;
+            mat-card-title {
+                font-size: 2rem;
+                font-weight: 300;
+                font-style: bold;
+            }
+        }
+        .group_btn_rrss {
+            flex-direction: column;
+        }
+
+        .ampolleta_img {
+            position: relative;
+            left: 1%;
+            height: 100px;
+            bottom: 0px;
+        }
+    }
+}

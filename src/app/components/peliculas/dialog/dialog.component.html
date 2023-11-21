@@ -1,0 +1,35 @@
+<ng-container>
+    <mat-dialog-content>
+        <form [formGroup]="form">
+            <mat-form-field class="full-width-input separator" color="accent">
+                <mat-label>nombre</mat-label>
+                <input matInput value="{{data.nombre}}" formControlName="nombre" type="text" required>
+                <mat-error *ngIf="form.get('nombre')?.errors">
+                    nombre name is required
+                </mat-error>
+            </mat-form-field>
+            <mat-form-field class="full-width-input separator" color="accent">
+                <mat-label>director</mat-label>
+                <input matInput value="{{data.director}}" formControlName="director" type="text" required>
+                <mat-error *ngIf="form.get('director')?.errors">
+                    director is required
+                </mat-error>
+            </mat-form-field>
+
+            <mat-form-field class="full-width-input separator" color="accent">
+                <mat-label>duracion</mat-label>
+                <input matInput value="{{data.duracion}}" formControlName="duracion" type="number" required>
+                <mat-error *ngIf="form.get('age')?.errors">
+                    duracion is required
+                </mat-error>
+            </mat-form-field>
+        </form>
+    </mat-dialog-content>
+
+    <mat-dialog-actions>
+        <button class="mat-raised-button" (click)="close()">CERRAR</button>
+        <span class="example-spacer"></span>
+        <button mat-raised-button type="submit" color="primary" [mat-dialog-close]="form.value"
+            [disabled]="form.invalid">Save</button>
+    </mat-dialog-actions>
+</ng-container>

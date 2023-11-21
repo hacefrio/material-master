@@ -1,0 +1,34 @@
+<div class="container">
+
+    <div class="col-sm-6 col-lg-offset-3">
+        <form [formGroup]="peliculaForm" (ngSubmit)="onSaveUser()">
+            <div >
+                <mat-form-field class="full-width-input " color="primary">
+                    <mat-label>Nombre</mat-label>
+                    <input matInput placeholder="Nombre" formControlName="nombre" type="text" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width-input separator" color="primary">
+                    <mat-label>director</mat-label>
+                    <input matInput placeholder="director" formControlName="director" type="text" required>
+                </mat-form-field>
+            </div>
+            <div>
+                <mat-form-field class="full-width-input separator" color="primary">
+                    <mat-label>duracion</mat-label>
+                    <input matInput placeholder="duracion" formControlName="duracion" type="number" required>
+                </mat-form-field>
+            </div>
+            <div >
+                <mat-form-field class="full-width-input separator" color="primary">
+                    <mat-label>imagen</mat-label>
+                    <ngx-mat-file-input formControlName="imagen" accept="image/png, image/jpeg" or accept=".png, .jpg, .jpeg" >
+                    </ngx-mat-file-input>
+                </mat-form-field>
+            </div>
+            <button class="mat-raised-button" (click)="close()">CERRAR</button>
+            <button [disabled]="peliculaForm.invalid" mat-raised-button type="submit" color="primary">Guardar</button>
+        </form>
+    </div>
+</div>
